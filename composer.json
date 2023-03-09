@@ -1,0 +1,34 @@
+{
+    "name": "pyncer/snyppet-install",
+    "type": "library",
+    "description": "Pyncer snyppet for handling snyppet installs.",
+    "homepage": "https://pyncer.com/app",
+    "license": "Unlicense",
+    "require": {
+        "php": ">=8.1",
+        "psr/http-message": "^1.0.1",
+        "pyncer/app": "^1.2.0",
+        "pyncer/core": "^1.0.1",
+        "pyncer/data": "^1.0.1",
+        "pyncer/database": "^1.0.1",
+        "pyncer/exception": "^1.0.0",
+        "pyncer/http": "^1.0.3",
+        "pyncer/snyppet": "^1.0.0",
+        "pyncer/validation": "^1.1.0"
+    },
+    "autoload": {
+        "files": ["src/autoload.php"],
+        "psr-4": {
+            "Pyncer\\Snyppet\\Install\\": "src/"
+        }
+    },
+    "support": {
+        "issues": "https://github.com/pyncerrc/pyncer-snyppet-install/issues",
+        "source": "https://github.com/pyncerrc/pyncer-snyppet-install"
+    },
+    "extra" : {
+        "branch-alias" : {
+            "dev-main" : "1.0-dev"
+        }
+    }
+}

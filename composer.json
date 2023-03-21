@@ -2,7 +2,7 @@
     "name": "pyncer/snyppet-install",
     "type": "library",
     "description": "Pyncer snyppet for handling snyppet installs.",
-    "homepage": "https://pyncer.com/app",
+    "homepage": "https://pyncer.com/snyppet/install",
     "license": "Unlicense",
     "require": {
         "php": ">=8.1",

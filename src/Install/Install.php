@@ -20,7 +20,7 @@ class Install extends AbstractInstall
 
     protected function safeUninstall(): bool
     {
-        if ($connection->hasTable('install')) {
+        if ($this->connection->hasTable('install')) {
             $this->connection->dropTable('install');
         }
 

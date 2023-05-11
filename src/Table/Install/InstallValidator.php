@@ -4,6 +4,7 @@ namespace Pyncer\Snyppet\Install\Table\Install;
 use Pyncer\Data\Validation\AbstractValidator;
 use Pyncer\Database\ConnectionInterface;
 use Pyncer\Validation\Rule\DateTimeRule;
+use Pyncer\Validation\Rule\RequiredRule;
 use Pyncer\Validation\Rule\StringRule;
 
 class InstallValidator extends AbstractValidator
@@ -12,23 +13,26 @@ class InstallValidator extends AbstractValidator
     {
         parent::__construct($connection);
 
-        $this->addRule(
+        $this->addRules(
             'alias',
+            new RequiredRule(),
             new StringRule(
                 maxLength: 50,
             ),
         );
 
-        $this->addRule(
+        $this->addRules(
             'version',
+            new RequiredRule(),
             new StringRule(
                 maxLength: 25,
                 allowNull: true,
             ),
         );
 
-        $this->addRule(
+        $this->addRules(
             'insert_date_time',
+            new RequiredRule(),
             new DateTimeRule(),
         );
     }

@@ -32,10 +32,12 @@ class InitializeMiddleware implements MiddlewareInterface
         }
 
         // Install mapper adaptor
-        $loggerMapperAdaptor = new MapperAdaptor(
-            new InstallMapper($connection)
-        );
-        $handler->set(ID::mapperAdaptor('install'), $loggerMapperAdaptor);
+        if (!$handler->has(ID::mapperAdaptor('install'))) {
+            $loggerMapperAdaptor = new MapperAdaptor(
+                new InstallMapper($connection)
+            );
+            $handler->set(ID::mapperAdaptor('install'), $loggerMapperAdaptor);
+        }
 
         return $handler->next($request, $response);
     }

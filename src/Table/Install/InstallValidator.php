@@ -32,7 +32,7 @@ class InstallValidator extends AbstractValidator
 
         $this->addRules(
             'insert_date_time',
-            new RequiredRule(),
+            new RequiredRule(DateTimeRule::EMPTY),
             new DateTimeRule(),
         );
     }

@@ -1,5 +1,9 @@
 # Change Log
 
+## 1.0.3 - 2026-08-12
+
+- Updated validator rule configuration.
+
 ## 1.0.2 - 2023-05-11
 
 ### Fixed
